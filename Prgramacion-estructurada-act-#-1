@@ -1,0 +1,15 @@
+def evaluar_signos_vitales():
+
+    Temp = float(input("Ingrese la temperatura: "))
+    Fc = float(input("Ingrese la frecuencia cardiaca: "))
+    Sat = float(input("Ingrese la saturacion: "))
+
+    if Sat < 90 or fc > 120:
+        print("Rojo")
+    elif Temp >= 39:
+        print("Amarillo")
+    else:
+        print("Verde")
+
+    
+evaluar_signos_vitales()
