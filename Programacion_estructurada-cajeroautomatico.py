@@ -13,7 +13,7 @@ def retiro_cajero():
     elif (retirado_hoy + monto) > limite_diario:
         mensaje = "Limite Diario Excedido"
     else:
-        saldo -= monto
+        saldo = saldo - monto
         mensaje = "Entregado"
 
     
