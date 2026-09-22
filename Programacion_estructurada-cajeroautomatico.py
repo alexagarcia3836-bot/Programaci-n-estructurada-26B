@@ -17,7 +17,7 @@ def retiro_cajero():
         mensaje = "Entregado"
 
     
-    print(f"Resultado: {mensaje} | saldo final: ${saldo:.2f}")
+        print(f"Resultado: {mensaje} | saldo final: ${saldo:.2f}")
 
 
     retiro_cajero()
