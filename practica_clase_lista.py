@@ -1,27 +1,31 @@
 import random
 import time
-import matplotlib.pyplot as plt
 
 def suma_objetivo(lista, objetivo):
     n = len(lista)
     for i in range(n):
-        for i in range(i + 1, n):
+        # CORRECCIÓN: Cambiado de 'i' a 'j' para el bucle secundario
+        for j in range(i + 1, n): 
+            # CORRECCIÓN: Ahora 'i' y 'j' existen correctamente
             if lista[i] + lista[j] == objetivo:
                 return True
     return False
 
 if __name__ == "__main__":
-    lista = [1,2,3,4,5]
 
-    lista1 = [i for i in range (10000)]
+    tamaños = [1000, 2000, 4000, 8000]
 
-    objetivo = 9
-    resultado = suma_objetivo(lista, objetivo)
+    for n in tamaños:
 
-    inicio = time.perf_counter()
+        lista = [random.randint(1, 10000) for _ in range(n)]
 
-    final = time.perf_counter()
+        objetivo_imposible = -1
 
-    print(f"tiempo de ejecucion: {final - inicio: 6f} segundos ")
+        inicio = time.perf_counter()
 
+        suma_objetivo(lista, objetivo_imposible)
 
+        final = time.perf_counter()
+
+        tiempo_ejecucion = final - inicio
+        print(f"Para n = {n:<4} | Tiempo de ejecucion: {tiempo_ejecucion:.6f} segundos")
