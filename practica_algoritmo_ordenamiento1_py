@@ -5,7 +5,7 @@ def burbuja(lista, clave):
     for i in range(n-1):
         for j in range(n-1-i):
             if lista[j][clave] > lista[j+1][clave]:
-                # Intercambio
+                
                 lista[j], lista[j+1] = lista[j+1], lista[j]
     return lista
 
@@ -14,7 +14,7 @@ def contenido_csv(nombre_archivo):
         lector = csv.DictReader(archivo)
         pacientes = list(lector)
 
-    # Ordenar usando burbuja por la columna "nombre"
+    
     pacientes_ordenados = burbuja(pacientes, "nombre")
 
     print("Pacientes ordenados por nombre:")
