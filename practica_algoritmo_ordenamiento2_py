@@ -1,0 +1,26 @@
+import csv
+
+def burbuja(lista, clave):
+    n = len(lista)
+    for i in range(n-1):
+        for j in range(n-1-i):
+            if lista[j][clave] > lista[j+1][clave]:
+                # Intercambio
+                lista[j], lista[j+1] = lista[j+1], lista[j]
+    return lista
+
+def contenido_csv(nombre_archivo):
+    with open(nombre_archivo, mode='r', newline='', encoding='utf-8') as archivo:
+        lector = csv.DictReader(archivo)
+        pacientes = list(lector)
+
+    # Ordenar usando burbuja por la columna "nombre"
+    pacientes_ordenados = burbuja(pacientes, "nombre")
+
+    print("Pacientes ordenados por nombre:")
+    for p in pacientes_ordenados:
+        print(f"{p['nombre']} {p['apellido']} - Edad: {p['edad']}")
+
+if __name__ == "__main__":
+    ruta = r"C:\Users\carlos\Documents\Programas\Practica_clase_listas\pacientes.csv"
+    contenido_csv(ruta)
