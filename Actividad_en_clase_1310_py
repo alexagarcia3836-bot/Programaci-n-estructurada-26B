@@ -1,0 +1,46 @@
+import csv
+
+# /Users/aleon/Documents/CUTlajo/Clases/2026B/Programación Estructurada/07_Codigo/PE26B/Practica5
+
+
+def contenido_csv(nombre_archivo):
+    with open(nombre_archivo, mode='r', newline='', encoding='utf-8') as archivo:
+            lector = csv.reader(archivo)
+            #for fila in lector:
+                #print(fila)
+    
+            # Imprimir las columnas del archivo CSV
+            archivo.seek(0)  # Reset file pointer to the beginning
+            columnas = next(lector)  # Get the first row (column names)
+            print("Columnas:", columnas)
+    
+            # listar el contenido de la columna "Nombre"
+            nombre_index = columnas.index("nombre")
+            archivo.seek(0)  # Reset file pointer to the beginning
+            next(lector)  # Skip the header row
+            for fila in lector:
+                print("Nombre:", fila[nombre_index])
+
+
+    # return listas? columnas? filas? lector?
+
+
+if __name__ == "__main__":
+    nombre_archivo = "pacientes_mini.csv"
+
+    with open(nombre_archivo, mode='r', newline='', encoding='utf-8') as archivo:
+            lector = csv.reader(archivo)
+            #for fila in lector:
+                #print(fila)
+    
+            # Imprimir las columnas del archivo CSV
+            archivo.seek(0)  # Reset file pointer to the beginning
+            columnas = next(lector)  # Get the first row (column names)
+            print("Columnas:", columnas)
+    
+            # listar el contenido de la columna "Nombre"
+            nombre_index = columnas.index("nombre")
+            archivo.seek(0)  # Reset file pointer to the beginning
+            next(lector)  # Skip the header row
+            for fila in lector:
+                print("Nombre:", fila[nombre_index])
