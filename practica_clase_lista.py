@@ -4,9 +4,9 @@ import time
 def suma_objetivo(lista, objetivo):
     n = len(lista)
     for i in range(n):
-        # CORRECCIÓN: Cambiado de 'i' a 'j' para el bucle secundario
+  
         for j in range(i + 1, n): 
-            # CORRECCIÓN: Ahora 'i' y 'j' existen correctamente
+            
             if lista[i] + lista[j] == objetivo:
                 return True
     return False
