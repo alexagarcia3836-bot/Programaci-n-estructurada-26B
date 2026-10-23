@@ -1,0 +1,21 @@
+{
+  "pregunta": "¿Es una persona real?",
+  "si": {
+    "pregunta": "¿Es actor?",
+    "si": {
+      "respuesta": "Johnny Deep"
+    },
+    "no": {
+      "respuesta": "Albert Einstein"
+    }
+  },
+  "no": {
+    "pregunta": "¿Es pirata?",
+    "si": {
+      "respuesta": "Portgas D. Ace"
+    },
+    "no": {
+      "respuesta": "Harry Potter"
+    }
+  }
+}
