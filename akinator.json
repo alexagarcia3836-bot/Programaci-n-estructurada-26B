@@ -3,19 +3,103 @@
   "si": {
     "pregunta": "¿Es actor?",
     "si": {
-      "respuesta": "Johnny Deep"
+      "pregunta": "¿Interpreta a un superheroe de marvel?",
+      "si": {
+        "respuesta": "Evan peters"
+      },
+      "no": {
+        "respuesta": "Johnny Deep"
+      }
     },
     "no": {
-      "respuesta": "Albert Einstein"
+      "pregunta": "¿Es cantante?",
+      "si": {
+        "pregunta": "¿Es noruega?",
+        "si": {
+          "respuesta": "Aurora"
+        },
+        "no": {
+          "respuesta": "Britney spears"
+        }
+      },
+      "no": {
+        "respuesta": "Albert Einstein"
+      }
     }
   },
   "no": {
     "pregunta": "¿Es pirata?",
     "si": {
-      "respuesta": "Portgas D. Ace"
+      "pregunta": "¿Lo interpreta johnny deep?",
+      "si": {
+        "respuesta": "Jack sparrow"
+      },
+      "no": {
+        "respuesta": "Portgas D. Ace"
+      }
     },
     "no": {
-      "respuesta": "Harry Potter"
+      "pregunta": "¿Es un personaje de sanrio?",
+      "si": {
+        "pregunta": "¿Es una liebre?",
+        "si": {
+          "pregunta": "¿Es amiga de kuromi?",
+          "si": {
+            "respuesta": "My melody"
+          },
+          "no": {
+            "respuesta": "Kuromi"
+          }
+        },
+        "no": {
+          "respuesta": "Cinnamoroll"
+        }
+      },
+      "no": {
+        "pregunta": "¿Es un superheroe?",
+        "si": {
+          "pregunta": "¿Es un personaje de marvel?",
+          "si": {
+            "respuesta": "spiderman"
+          },
+          "no": {
+            "respuesta": "Harry Potter"
+          }
+        },
+        "no": {
+          "pregunta": "¿Es ninja?",
+          "si": {
+            "pregunta": "¿Es protagonista?",
+            "si": {
+              "respuesta": "Naruto Uzumaki"
+            },
+            "no": {
+              "respuesta": "itachi uchiha"
+            }
+          },
+          "no": {
+            "pregunta": "¿Es un biju?",
+            "si": {
+              "respuesta": "Kurama"
+            },
+            "no": {
+              "pregunta": "¿Sale en moster high?",
+              "si": {
+                "pregunta": "¿Es hermana de cleo de nile?",
+                "si": {
+                  "respuesta": "Nefera de nile"
+                },
+                "no": {
+                  "respuesta": "Lagoona blue"
+                }
+              },
+              "no": {
+                "respuesta": "Spiderman"
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
