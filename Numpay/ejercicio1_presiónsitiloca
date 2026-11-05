@@ -1,0 +1,22 @@
+import numpy as np
+
+
+sistolica = np.array([118, 135, 142, 110, 128, 155, 121])
+
+
+promedio = np.mean(sistolica)
+desviacion = np.std(sistolica)
+
+print(f"Promedio: {promedio:.2f}")
+print(f"Desviación estándar: {desviacion:.2f}")
+
+
+mascara = sistolica >= 130
+conteo = np.sum(mascara)
+
+print(f"Cantidad de lecturas >= 130 mmHg: {conteo}")
+
+
+posiciones = np.flatnonzero(mascara)
+
+print(f"Posiciones de las lecturas >= 130 mmHg: {posiciones}")
