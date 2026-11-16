@@ -1,0 +1,14 @@
+import pandas as pd
+
+
+df = pd.read_csv(r""C:\Users\carlos\Downloads\pacientes - pacientes.csv")
+
+print("--- a) Número de pacientes y columnas ---")
+print(df.shape)
+
+print("\n--- b) Columnas con faltantes y cantidad ---")
+faltantes = df.isna().sum()
+print(faltantes[faltantes > 0])
+
+print("\n--- c) Tipo de dato de cada columna ---")
+print(df.dtypes)
