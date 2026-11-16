@@ -1,0 +1,16 @@
+import pandas as pd
+
+# Carga del archivo (si lo corres en un script nuevo; si estás en el mismo cuaderno/archivo, ya tienes 'df')
+df = pd.read_csv(r"C:\Users\carlos\Downloads\pacientes - pacientes.csv")
+
+
+alerta = df[(df["temp_c"] >= 38) & (df["fc_lpm"] > 100)]
+
+
+print("--- b) Cantidad de pacientes en alerta y sus datos ---")
+print("Total de pacientes:", len(alerta))
+print(alerta[["id", "temp_c", "fc_lpm", "servicio"]])
+
+
+print("\n--- c) Distribución por servicio ---")
+print(alerta["servicio"].value_counts())
