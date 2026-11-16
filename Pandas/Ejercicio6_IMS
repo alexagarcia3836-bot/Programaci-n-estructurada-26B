@@ -1,0 +1,24 @@
+import pandas as pd
+
+
+df = pd.read_csv(r"C:\Users\carlos\Downloads\pacientes - pacientes.csv")
+
+
+df["imc"] = df["peso_kg"] / (df["estatura_m"] ** 2)
+
+
+bins = [0, 18.5, 25, 30, 100]
+labels = ["Bajo peso", "Normal", "Sobrepeso", "Obesidad"]
+
+df["categoria_imc"] = pd.cut(df["imc"], bins=bins, labels=labels, right=False)
+
+
+print("--- Conteo de pacientes por categoría ---")
+print(df["categoria_imc"].value_counts(dropna=False))
+
+sin_imc = df["imc"].isna().sum()
+print(f"\nPacientes sin IMC: {sin_imc}")
+
+
+print("\n--- Detalle de pacientes sin IMC ---")
+print(df[df["imc"].isna()][["id", "peso_kg", "estatura_m", "imc"]])
