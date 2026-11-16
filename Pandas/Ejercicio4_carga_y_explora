@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-df = pd.read_csv(r""C:\Users\carlos\Downloads\pacientes - pacientes.csv")
+df = pd.read_csv(r"C:\Users\carlos\Downloads\pacientes - pacientes.csv")
 
 print("--- a) Número de pacientes y columnas ---")
 print(df.shape)
