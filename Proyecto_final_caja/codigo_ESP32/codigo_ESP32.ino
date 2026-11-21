@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include <ESP32Servo.h>
 
 // Definición de pines según el circuito
@@ -13,8 +14,8 @@ int distancia;
 
 // Configuración de ángulos y distancia de activación
 const int distanciaActivacion = 15; // Abre la tapa si detecta algo a menos de 15 cm
-const int anguloCerrado = 0;        // Posición de tapa cerrada
-const int anguloAbierto = 150;      // Posición de tapa abierta
+const int anguloCerrado = 0;        // Posición de tapa cerrada (0°)
+const int anguloAbierto = 73;       // Posición de tapa abierta (90°)
 
 void setup() {
   Serial.begin(115200);
@@ -45,12 +46,12 @@ void loop() {
   Serial.print(distancia);
   Serial.println(" cm");
 
-  // Abre la tapa si detecta entre 3 cm y 15 cm
+  // Abre la tapa a 90° si detecta entre 3 cm y 15 cm
   if (distancia > 2 && distancia <= distanciaActivacion) {
-    miServo.write(anguloAbierto); // Abre la tapa
+    miServo.write(anguloAbierto); // Abre directo a 73°
     delay(3000);                  // Mantiene la tapa abierta 3 segundos
   } else {
-    miServo.write(anguloCerrado); // Cierra la tapa
+    miServo.write(anguloCerrado); // Cierra directo a 0°
   }
 
   delay(200); // Pausa entre mediciones
