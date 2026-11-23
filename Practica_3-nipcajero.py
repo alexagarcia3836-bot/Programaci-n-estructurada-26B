@@ -17,3 +17,4 @@ if __name__ == "__main__":
             print("Solo puedes ingresar numeros")
     resultado = "ACCESO" if acceso_concedido else "DENEGADO"
     print(resultado)
+ 
