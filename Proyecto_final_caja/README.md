@@ -37,7 +37,7 @@ Desarrollar un prototipo funcional de contenedor de residuos inteligente aliment
 ## 3. Instrucciones de Armado y Ejecución
 
 ### A. Armado del Circuito y Calibración Mecánica
-1. **Protección de niveles lógicos:** Conectar el pin `ECHO` del HC-SR04 a una resistencia de 1kO en serie con una de 2 en serie de 1kO a `GND`, enviando el nodo intermedio ($3.33\text{ V}$) al `GPIO 25` del ESP32.
+1. **Protección de niveles lógicos:** Conectar el pin `ECHO` del HC-SR04 a una resistencia de 1kO en serie con una en serie de 1kO a `GND`, enviando el nodo intermedio 3.33 V al `GPIO 25` del ESP32.
 2. **Alimentación y filtrado:** Conectar `VCC` del HC-SR04 y el cable rojo del SG90 a `VIN` 5 V, colocando el capacitor electrolítico entre `VIN` y `GND` respetando polaridad.
 3. **Ajuste de palanca:** Energizar el sistema sin la palanca blanca montada en el eje del servo para que se posicione en `ANGULO_CERRADO`. Con la tapa del bote cerrada manualmente, encajar la palanca en el eje sin forzar el tope mecánico y asegurar con su tornillo.
 
